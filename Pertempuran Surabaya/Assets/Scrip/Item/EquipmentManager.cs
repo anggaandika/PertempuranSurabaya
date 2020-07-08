@@ -5,15 +5,30 @@ using UnityEngine;
 public class EquipmentManager : MonoBehaviour
 {
     #region Singleton
-    public static EquipmentManager instance;
+
+    public static EquipmentManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<EquipmentManager>();
+            }
+            return _instance;
+        }
+    }
+    static EquipmentManager _instance;
 
     void Awake()
     {
-        instance = this;
+        _instance = this;
     }
+
     #endregion
 
+    public SkinnedMeshRenderer targetMess;
     Equipment[] currentEquipment;
+    SkinnedMeshRenderer[] currentMeshes;
 
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
@@ -26,13 +41,14 @@ public class EquipmentManager : MonoBehaviour
 
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
+        currentMeshes = new SkinnedMeshRenderer[numSlots];
     }
 
     public void Equip(Equipment newItem)
     {
-        int slotIndex = (int)newItem.equipSlot;
-
         Equipment oldItem = null;
+
+        int slotIndex = (int)newItem.equipSlot;
 
         if (currentEquipment[slotIndex] != null)
         {
@@ -46,12 +62,22 @@ public class EquipmentManager : MonoBehaviour
         }
 
         currentEquipment[slotIndex] = newItem;
+        SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mess);
+        newMesh.transform.parent = targetMess.transform;
+
+        newMesh.bones = targetMess.bones;
+        newMesh.rootBone = targetMess.rootBone;
+        currentMeshes[slotIndex] = newMesh;
     }
 
     public void Unequip (int slotIndex)
     {
         if (currentEquipment[slotIndex] != null)
         {
+            if (currentMeshes[slotIndex] != null)
+            {
+                Destroy(currentMeshes[slotIndex].gameObject);
+            }
             Equipment oldItem = currentEquipment[slotIndex];
             inventory.AddItem(oldItem);
 
