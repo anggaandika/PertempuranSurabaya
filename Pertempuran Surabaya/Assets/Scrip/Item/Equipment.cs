@@ -4,7 +4,8 @@
 public class Equipment : Item
 {
     public EquipmentSlot equipSlot;
-    public SkinnedMeshRenderer mess;
+    public SkinnedMeshRenderer mesh;
+    public EquipmentMeshRegion[] meshRegion;
 
     public int armorModifier;
     public int damageModifiar;
@@ -18,3 +19,4 @@ public class Equipment : Item
 }
 
 public enum EquipmentSlot { Male, Smg, Rifel }
+public enum EquipmentMeshRegion {Arms, Back}

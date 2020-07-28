@@ -9,12 +9,7 @@ public class PlayerStats : CharacterStats
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     void OnEquipmentChanged (Equipment newItem, Equipment oldItem)
     {
