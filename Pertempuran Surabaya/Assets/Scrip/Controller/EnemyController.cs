@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
     {
         Vector3 deraction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(deraction.x, 0, deraction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
     }
 
     void OnDrawGizmosSelected()
