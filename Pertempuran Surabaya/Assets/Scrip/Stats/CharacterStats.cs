@@ -15,15 +15,7 @@ public class CharacterStats : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxValue(maxHealth);
     }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(10);
-        }
-    }
-
+    
     public void TakeDamage (int damage)
     {
         damage -= armor.GetValue();

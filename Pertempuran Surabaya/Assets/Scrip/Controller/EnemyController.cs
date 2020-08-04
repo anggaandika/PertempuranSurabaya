@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-
+        meshAgent.stoppingDistance = 10;
         if (distance <= lookRadius)
         {
             meshAgent.SetDestination(target.position);

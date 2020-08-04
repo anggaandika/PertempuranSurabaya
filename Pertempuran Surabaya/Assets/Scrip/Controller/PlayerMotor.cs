@@ -20,6 +20,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (target != null)
         {
+            agent.stoppingDistance = 10;
             agent.SetDestination(target.position);
             FaceTarget();
         }
