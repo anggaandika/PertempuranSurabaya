@@ -31,7 +31,6 @@ public class CharacterCombat : MonoBehaviour
             InCombat = false;
         }
     }
-
     public void Attack (CharacterStats targetStats)
     {
         if(attackCooldown <= 0f)
