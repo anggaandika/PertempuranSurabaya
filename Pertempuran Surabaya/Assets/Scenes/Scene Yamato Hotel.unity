@@ -2732,7 +2732,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.45
+  m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -2802,7 +2802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8125aad20edf68a4291e7a2503388f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 15
+  lookRadius: 10
 --- !u!114 &339746740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2831,7 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e824cd562e697cc44b9a7b83f41fea46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 15
+  radius: 9.9
   interactableTransform: {fileID: 339746736}
 --- !u!114 &339746742
 MonoBehaviour:
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   damage:
     baseValue: 5
   armor:
-    baseValue: 5
+    baseValue: 100
   healthBar: {fileID: 1397253676}
 --- !u!114 &339746743
 MonoBehaviour:
@@ -7221,7 +7221,7 @@ MonoBehaviour:
   damage:
     baseValue: 5
   armor:
-    baseValue: 5
+    baseValue: 100
   healthBar: {fileID: 1982547311}
 --- !u!114 &904143970
 MonoBehaviour:
@@ -7235,7 +7235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e824cd562e697cc44b9a7b83f41fea46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 15
+  radius: 9.9
   interactableTransform: {fileID: 904143967}
 --- !u!114 &904143971
 MonoBehaviour:
@@ -7265,7 +7265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8125aad20edf68a4291e7a2503388f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 15
+  lookRadius: 10
 --- !u!54 &904143973
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7292,7 +7292,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.45
+  m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -9854,7 +9854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1d24f0532218b4595e5ce03224e0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replacebleAttackAnim: {fileID: 4917898918333293993, guid: b669ec21864e9fb41a7fea6fd54e0da4,
+  replacebleAttackAnim: {fileID: -960569125595894906, guid: b669ec21864e9fb41a7fea6fd54e0da4,
     type: 3}
   defaultAttackAnimSet:
   - {fileID: 4917898918333293993, guid: b669ec21864e9fb41a7fea6fd54e0da4, type: 3}
@@ -9913,7 +9913,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.45
+  m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -9926,9 +9926,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 1282099007}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Speed: 5
-  m_Acceleration: 80
+  m_Acceleration: 600
   avoidancePriority: 50
   m_AngularSpeed: 1200
   m_StoppingDistance: 0
@@ -9985,7 +9985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 1
-  attackDelay: 0.6
+  attackDelay: 0.5
 --- !u!1001 &1290567899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13491,62 +13491,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hotel Yamato
       objectReference: {fileID: 0}
-    - target: {fileID: 2502203975881118265, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2502203975881118265, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4695666576454475813, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4695666576454475813, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7469484624682501897, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7469484624682501897, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -492420421572216379, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: -492420421572216379, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -7462036371361415008, guid: ec7b2c20a17e66f49a40378816473d75,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: -7462036371361415008, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -594094835925579944, guid: ec7b2c20a17e66f49a40378816473d75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: -594094835925579944, guid: ec7b2c20a17e66f49a40378816473d75,
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -13621,6 +13571,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -594094835925579944, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: -594094835925579944, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -492420421572216379, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: -492420421572216379, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2498326036907817780, guid: ec7b2c20a17e66f49a40378816473d75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13630,6 +13600,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502203975881118265, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502203975881118265, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695666576454475813, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695666576454475813, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469484624682501897, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469484624682501897, guid: ec7b2c20a17e66f49a40378816473d75,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec7b2c20a17e66f49a40378816473d75, type: 3}
