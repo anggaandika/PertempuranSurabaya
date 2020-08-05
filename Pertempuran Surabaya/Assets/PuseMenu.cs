@@ -48,3 +48,7 @@ public class PuseMenu : MonoBehaviour
         Application.Quit();
     }
 }
+
+
+
+

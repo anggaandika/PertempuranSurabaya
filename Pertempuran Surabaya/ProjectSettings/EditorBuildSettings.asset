@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Yamato Hotel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Dialog.unity
+    guid: ad549999017331d41a0a7fdb7a2e3ff1
   m_configObjects: {}
