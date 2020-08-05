@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<HealthBar>();
+                _instance = FindObjectOfType<HealthBar >();
             }
             return _instance;
         }

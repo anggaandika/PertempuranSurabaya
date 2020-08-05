@@ -10,10 +10,12 @@ public class Stats
     private int baseValue;
 
     private List<int> modifiers = new List<int>();
-    
+
+    public int BaseValue { get => baseValue; set => baseValue = value; }
+
     public int GetValue ()
     {
-        int finalValue = baseValue;
+        int finalValue = BaseValue;
         modifiers.ForEach(x => finalValue += x);
         return finalValue;
     }
