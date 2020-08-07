@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask movementMaks;
 
+    public GameObject video;
+    
     Camera cam;
 
     PlayerMotor motor;

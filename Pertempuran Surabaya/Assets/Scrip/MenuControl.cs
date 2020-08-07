@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuControl : MonoBehaviour
 {
+   public GameObject video;
    public void ButtonStart()
    {
    		SceneManager.LoadScene(1);
+        video.SetActive(true);
    }
    public void ButtonCredit()
    {
