@@ -36,7 +36,6 @@ public class CharacterCombat : MonoBehaviour
         if(attackCooldown <= 0f)
         {
             StartCoroutine(DoDamage(targetStats, attackDelay));
-
             if(OnAttack != null)
             {
                 OnAttack();
@@ -51,7 +50,7 @@ public class CharacterCombat : MonoBehaviour
     IEnumerator DoDamage (CharacterStats stats, float delay)
     {
         yield return new WaitForSeconds(delay);
-        stats.TakeDamage(myStats.damage.GetValue());
+        stats.TakeDamage(stats.damage.GetValue());
         if (stats.currentHealth <= 0)
         {
             InCombat = false;
