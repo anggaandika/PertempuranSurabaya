@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         cam = Camera.main;
         motor = GetComponent<PlayerMotor>();
+        video.SetActive(true);
     }
 
     // Update is called once per frame

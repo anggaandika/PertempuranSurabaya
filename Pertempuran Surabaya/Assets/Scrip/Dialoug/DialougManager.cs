@@ -9,7 +9,7 @@ public class DialougManager : MonoBehaviour
     public Text dialogText;
 
     public Animator animator;
-    public GameObject Panel;
+    private GameObject panel;
 
     private Queue<string> sentences;
 
@@ -21,6 +21,7 @@ public class DialougManager : MonoBehaviour
     
     public void StartDialoug (Dialoug dialoug)
     {
+        panel = dialoug.video;
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialoug.name;
@@ -37,11 +38,11 @@ public class DialougManager : MonoBehaviour
 
     public void DisplayNextSenctence()
     {
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
         string sentence = sentences.Dequeue();
         dialogText.text = sentence;
     }
@@ -49,6 +50,7 @@ public class DialougManager : MonoBehaviour
     void EndDialogue ()
     {
         animator.SetBool("IsOpen", false);
-        Panel.SetActive(true);
+        if (panel)
+            panel.SetActive(true);
     }
 }

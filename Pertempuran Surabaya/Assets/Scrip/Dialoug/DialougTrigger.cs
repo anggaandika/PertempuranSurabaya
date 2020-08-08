@@ -9,6 +9,5 @@ public class DialougTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         FindObjectOfType<DialougManager>().StartDialoug(dialoug);
-        Time.timeScale = 1f;
     }
 }
